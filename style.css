@@ -1,0 +1,145 @@
+body{
+    background: rgb(176, 174, 174);
+    overflow-x: hidden;
+}
+.header{
+    width:100%;
+    height: 200%;
+    top:0;
+    padding: 0 50px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+nav ul{
+    font-size: 18px;
+    justify-content: right;
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 20px;
+}
+nav ul li a{
+    font-size: 28px;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+nav ul li a:hover{
+    color: aliceblue;
+}
+.logo{
+    margin: 0 20px;
+    font-size: 60px;
+    font-weight: 600;
+}
+.logo:hover{
+    color: aliceblue;
+    cursor: pointer;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    /* background-color: aquamarine; */
+    place-items: center;
+    height: 100vh;
+    justify-self: center;
+    grid-gap:20px;
+}
+
+.grid-box{
+    width:300px;
+    height:390px;
+    gap:10px;
+    margin:20px;
+    text-align: center;
+    padding-top: 10px 20px;
+    border: 2px solid black;
+}
+.grid-box:hover{
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px black;
+}
+#kids{
+   grid-column: 1 /-1; 
+   font-size: 50px;
+   /* color: aliceblue; */
+}
+#kids:hover{
+    color: red;
+    cursor: pointer;
+    text-shadow: 0px 0px 20px red;
+}
+button{
+    font-size: 20px;
+    font-weight: 200;
+    padding: 10px 20px;
+    border-radius: 40%;
+}
+button a{
+    text-decoration: none;
+    color: black;
+}
+button, a:hover{
+    background-color: aqua;
+    color:red;
+}
+
+.box1{
+    /* border:2px solid black; */
+    background-color: rgb(38, 192, 197);
+}
+.box2{
+    background-color: red;
+}
+.box3{
+    background:linear-gradient(white, rgb(15, 140, 218))
+}
+.box4{
+    height: 390px;
+    background: linear-gradient(orange, rgb(82, 82, 207));
+}
+
+.box5{
+    height: 390px;
+    background: linear-gradient(blueviolet,pink);
+}
+
+.box6{
+    height:390px ;
+    background: linear-gradient( red,  yellow);
+}
+
+.header, .footer{
+    grid-column: 1 / -1;
+    background: blueviolet;
+}
+.footer{
+    width:100%;
+    height: auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .container {
+        justify-content: center;
+    }
+
+    .grid-container {
+       grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .grid-box {
+        grid-template-columns: 1fr;
+    }
+}
