@@ -129,17 +129,13 @@ button, a:hover{
 }
 
 @media (max-width: 768px) {
-    .container {
-        justify-content: center;
-    }
-
     .grid-container {
        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 450px) {
-    .grid-box {
+    .grid-container {
         grid-template-columns: 1fr;
     }
 }
